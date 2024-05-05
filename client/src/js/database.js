@@ -30,6 +30,8 @@ export const putDb = async (content) => {
 export const getDb = async () => {
   console.log('GET from the database');
 
+  const contactDb = await openDB('jate', 1);
+
   const tx = contactDb.transaction('jate', 'readonly');
 
   const store = tx.objectStore('jate');

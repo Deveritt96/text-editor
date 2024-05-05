@@ -23,9 +23,9 @@ module.exports = () => {
          title: 'JATE'
       }),
 
-      new InjectManifest ({
+      new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: './src-sw.js'
+        swDest: 'sw.js'
       }),
       
       new WebpackPwaManifest({
@@ -36,7 +36,7 @@ module.exports = () => {
         description: 'Just A Text Editor You Can Use Offline!',
         background_color: '#225ca3',
         theme_color: '#225ca3',
-        start_url: './',
+        start_url: '/',
         publicPath: './',
         icons: [
           {
